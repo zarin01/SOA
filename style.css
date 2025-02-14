@@ -15,11 +15,15 @@ Requires PHP: 7.1
 /* --------------------------------------------------------------
 Reset
 -------------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* stylelint-disable selector-list-comma-newline-after  */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
 	/* stylelint-disable max-line-length */
 	border: 0;
-	font-family: inherit;
+	font-family: "Inter", serif;
 	font-size: 100%;
 	font-style: inherit;
 	font-weight: inherit;
@@ -27,6 +31,10 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	outline: 0;
 	padding: 0;
 	vertical-align: baseline;
+	font-weight: 700;
+  	letter-spacing: -0.0415625em;
+  	line-height: 1.25;
+  
 }
 
 /* stylelint-enable selector-list-comma-newline-after */
@@ -108,7 +116,7 @@ Typography
 body,
 button {
 	color: #272c30;
-	font-family: "Public Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Bebas Neue", serif;
 	font-weight: 300;
 	font-size: 18px;
 	line-height: 1.6;
@@ -128,7 +136,7 @@ h4,
 h5,
 h6 {
 	clear: both;
-	font-family: "Public Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Bebas Neue", serif;
 	font-weight: 600;
 	line-height: 1.2;
 	margin-bottom: 3%;
@@ -162,6 +170,7 @@ h6 {
 p,
 .embed-vimeo {
 	margin-bottom: 1.2em;
+	font-family: "Public Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
 }
 
 b,
@@ -374,6 +383,30 @@ Class Styles
 	border: solid 1px #000;
 }
 
+.underline {
+	text-decoration: underline;
+}
+
+.header-width {
+	min-height: 215px;
+  min-width: 250px;
+  padding: 20px 20px 10px;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  color: #fff;
+  text-align: left;
+  margin: 0 auto 0 15%;
+}
+
+.header-font {
+  animation: fadeInAnimation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  font-size: 2em;
+  transition: opacity 150ms ease-in;
+  text-shadow: 0 0 5px #000;
+  font-family: "Bebas Neue", serif;
+}
 
 /* --------------------------------------------------------------
 Links
@@ -3393,7 +3426,6 @@ Content
 .site-content {
 	display: inline-block;
 	width: 100%;
-	padding: 0 0 7% 0;
 	vertical-align: top;
 	position: relative;
 	z-index: 10;
@@ -3933,8 +3965,11 @@ ul.wp-block-social-links,
 
 .alignfull,
 .alignwide {
-	margin-bottom: 2em;
 	width: 100%;
+}
+
+.wp-block-cover-image.has-parallax, .wp-block-cover.has-parallax, .wp-block-cover__image-background.has-parallax, video.wp-block-cover__video-background.has-parallax {
+	background-attachment: fixed !important;
 }
 
 @media (max-width: 600px) {
@@ -3971,3 +4006,12 @@ ul.wp-block-social-links,
 .wp-block-columns {
 	margin-bottom: 1.2em;
 }
+
+
+.story-cta, .soa-qoutes-contain {
+	margin: 40px auto;
+	padding: 40px;
+	background-color: rgba(255, 255, 255, .7);
+	max-width: 75rem;
+	text-align: center;
+  }
