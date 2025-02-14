@@ -27,6 +27,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	outline: 0;
 	padding: 0;
 	vertical-align: baseline;
+	background-color: white;
+
 }
 
 /* stylelint-enable selector-list-comma-newline-after */
@@ -357,6 +359,23 @@ table tr:last-child td {
 table tr:nth-child(even) {
 	background: #f2f2f2;
 }
+
+/* --------------------------------------------------------------
+Class Styles
+-------------------------------------------------------------- */
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.padding-xy {
+	padding: 15px;
+}
+
+.black-border {
+	border: solid 1px #000;
+}
+
 
 /* --------------------------------------------------------------
 Links
@@ -2989,6 +3008,15 @@ Header
 .drawer-wrap {
 	position: relative;
 }
+
+.story-blurb, .pastor-intro-text {
+	margin: 0 auto;
+	min-width: 350px;
+	max-width: 500px;
+	background-color: rgba(255, 255, 255, .9);
+	padding: 30px 50px;
+	text-align: center;
+  }
 
 .drawer {
 	padding: 10px 0 15px 0;
