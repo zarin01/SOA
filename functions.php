@@ -511,3 +511,39 @@ function genesis_block_theme_is_block_editor() {
 	// This is a Gutenberg Block Editor page.
 	return true;
 }
+
+
+
+
+
+function soa_slider_shortcode() {
+    ob_start();
+    ?>
+    <div class="sub-contain">
+        <div class="soa-qoutes-contain">
+            <h2>Real People, Real Stories</h2>
+            <div class="soa-slides">
+                <div class="soa-qoutes"><q>My father is from the east coast...</q><p class="soa-names">Ron</p></div>
+                <div class="soa-qoutes"><q>Last night my friends and I...</q><p class="soa-names">Tim</p></div>
+                <div class="soa-qoutes"><q>Yeah, I’m Jewish...</q><p class="soa-names">Anon</p></div>
+                <div class="soa-qoutes"><q>When I was in college...</q><p class="soa-names">Andrew</p></div>
+                <a class="prev">❮</a>
+                <a class="next">❯</a>
+            </div>
+            <div class="dot-container">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </div>
+    <script>
+        jQuery(document).ready(function () {
+            initSlider();
+        });
+    </script>
+    <?php
+    return ob_get_clean();
+}
+add_shortcode('soa_slider', 'soa_slider_shortcode');
