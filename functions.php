@@ -513,6 +513,16 @@ function genesis_block_theme_is_block_editor() {
 }
 
 
+function soa_enqueue_scripts() {
+    wp_enqueue_script(
+        'soa-slider', 
+        get_template_directory_uri() . '/js/slider.js', 
+        array('jquery'), 
+        null, 
+        true
+    );
+}
+add_action('wp_enqueue_scripts', 'soa_enqueue_scripts');
 
 
 
@@ -523,18 +533,12 @@ function soa_slider_shortcode() {
         <div class="soa-qoutes-contain">
             <h2>Real People, Real Stories</h2>
             <div class="soa-slides">
-                <div class="soa-qoutes"><q>My father is from the east coast...</q><p class="soa-names">Ron</p></div>
-                <div class="soa-qoutes"><q>Last night my friends and I...</q><p class="soa-names">Tim</p></div>
-                <div class="soa-qoutes"><q>Yeah, I’m Jewish...</q><p class="soa-names">Anon</p></div>
-                <div class="soa-qoutes"><q>When I was in college...</q><p class="soa-names">Andrew</p></div>
+                <div class="soa-qoutes"><q>My father is from the east coast. He didn’t suffer much antisemitism, except that he would get called “Christ killer” from time to time.</q><p class="soa-names"> -Ron</p></div>
+                <div class="soa-qoutes"><q>Last night my friends and I were playing cards. One guy told my Jewish friend that it made sense that he was winning all of the money because he is Jewish.</q><p class="soa-names"> -Tim</p></div>
+                <div class="soa-qoutes"><q>Yeah, I’m Jewish. Jewish enough for the Third Reich.</q><p class="soa-names"> -Anon</p></div>
+                <div class="soa-qoutes"><q>When I was in college, people would say that they ‘got Jewed’, meaning that someone ripped them off or negotiated them out of their money. Some of them were Christians, but using that saying made me wonder if they were very good ones.</q><p class="soa-names"> -Andrew</p></div>
                 <a class="prev">❮</a>
                 <a class="next">❯</a>
-            </div>
-            <div class="dot-container">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
             </div>
         </div>
     </div>

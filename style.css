@@ -460,26 +460,42 @@ Slider
 	display: none;
 	padding: 80px 80px 20px;
 	text-align: center;
-  }
-  .soa-qoutes {
-	display: none;
-	padding: 80px 80px 20px;
-	text-align: center;
-  } .prev:hover, .next:hover {
+}
+
+.sub-contain {
+	max-width: 670px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.slider-container .wp-block-cover__inner-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 670px;
+}
+
+.prev:hover, .next:hover {
 	background-color: rgba(0, 0, 0, 0.8);
 	color: white;
-  }
-  .prev:hover, .next:hover {
+}
+
+.prev:hover, .next:hover {
 	background-color: rgba(0, 0, 0, 0.8);
 	color: white;
-  }
-  a:hover, a:focus {
+}
+
+a:hover, a:focus {
 	text-decoration: none;
-  }
-  .prev {
+}
+
+.prev {
 	left: 0;
-  }
-  .prev, .next {
+}
+
+.prev, .next {
 	cursor: pointer;
 	position: absolute;
 	top: 50%;
@@ -491,11 +507,13 @@ Slider
 	font-size: 20px;
 	border-radius: 0 3px 3px 0;
 	user-select: none;
-  }
-  .prev {
+}
+
+.prev {
 	left: 0;
-  }
-  .prev, .next {
+}
+
+.prev, .next {
 	cursor: pointer;
 	position: absolute;
 	top: 50%;
@@ -4191,7 +4209,7 @@ ul.wp-block-social-links,
 }
 
 
-.story-cta, .soa-qoutes-contain {
+.story-cta {
 	margin: 40px auto;
 	padding: 40px;
 	background-color: rgba(255, 255, 255, .7);
@@ -4200,7 +4218,7 @@ ul.wp-block-social-links,
 }
 
 @media (max-width: 500px) {
-	.story-cta, .soa-qoutes-contain {
+	.story-cta {
 		margin: 20px 0px;
 		background-color: rgba(255, 255, 255, .7);
 		padding: 5px;
