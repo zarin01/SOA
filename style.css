@@ -109,6 +109,38 @@ a img {
 	border: 0;
 }
 
+
+
+hr {
+	background: linear-gradient(to left, currentColor calc(50% - 16px), transparent calc(50% - 16px), transparent calc(50% + 16px), currentColor calc(50% + 16px));
+	background-color: transparent !important;
+	border: none;
+	height: 0.1rem;
+	overflow: visible;
+	position: relative;
+	margin: 4rem auto;
+	color: #6d6d6d;
+}
+
+hr::before {
+	left: calc(50% - 0.5rem);
+}
+
+hr::after {
+	right: calc(50% - 0.5rem);
+  }
+
+hr::before, hr::after {
+	background: currentColor;
+	content: "";
+	display: block;
+	height: 1.6rem;
+	position: absolute;
+	top: calc(50% - 0.8rem);
+	transform: rotate(22.5deg);
+	width: 0.1rem;
+  }
+
 /* --------------------------------------------------------------
 Typography
 -------------------------------------------------------------- */
@@ -181,7 +213,7 @@ p strong {
 	font-weight: 700;
 	line-height: 1.25;
 	font-family: "Bebas Neue", Helvetica, sans-serif;
-
+	letter-spacing: normal;
 }
 
 dfn,
@@ -418,6 +450,12 @@ Class Styles
   margin: 0 auto 0 15%;
 }
 
+@media (max-width: 800px) {
+	.header-width {
+	  margin: 0;
+	}
+}
+
 .header-font {
   animation: fadeInAnimation ease 1s;
   animation-iteration-count: 1;
@@ -500,6 +538,48 @@ span.soa-we-statements {
 		gap: 40px;
 	}
 }
+
+
+.no-margin-y {
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+}
+
+.no-boxshadow-y {
+	box-shadow: 2px 0 6px rgba(0, 0, 0, 0.25) !important;
+}
+
+:where(.wp-block-columns.is-layout-flex) {
+	gap: 1em;
+}
+
+
+
+
+
+.kt-accordion-id2860_f24f77-07 .wp-block-kadence-pane .kt-accordion-header-wrap .kt-blocks-accordion-header {
+	color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  font-size: 3.2rem;
+  line-height: 1.25;
+  max-width: 58rem;
+  width: calc(100% - 4rem);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.25em;
+  background-color: #eeeeee !important;
+}
+
+.kt-accordion-panel-inner {
+	padding: 35px;
+}
+
 
 
 /* --------------------------------------------------------------
@@ -907,13 +987,14 @@ form {
 	justify-content: center !important;
 	flex-direction: column;
 	font-weight: 600;
-	text-transform: uppercase;
 	font-family: "Inter", sans-serif;
 	font-size: 17px;
 }
 
 .wpcf7 .wpcf7-submit.has-spinner {
-	margin-left: 15%;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 20px;
 	font-weight: 600;
 	text-transform: uppercase;
 	font-family: "Inter", sans-serif;
@@ -1328,8 +1409,9 @@ Menus
 
 @media (max-width: 1000px) {
 	.menu-toggle {
-		display: block;
-	}
+		display: flex;
+		flex-direction: row;
+	  }
 }
 
 .button-toggle {
@@ -1351,9 +1433,19 @@ Menus
 	display: none;
 }
 
+.menu-toggle button-toggle span {
+	display: none !important;
+}
+
 @media (max-width: 1000px) {
 	.drawer-menu-toggle {
 		display: inline-block;
+	}
+}
+
+@media (max-width: 600px) {
+	.site-title-wrap .custom-logo-link img {
+		min-width: 175px;
 	}
 }
 
@@ -3498,7 +3590,7 @@ body.admin-bar .is-sticky .site-header {
 	
 	.menu-toggle.button-toggle::before {
 	content: "⋮";
-	font-size: 24px; 
+	font-size: 30px; 
 	display: inline-block;
 	color: white;
 	}
@@ -3506,7 +3598,7 @@ body.admin-bar .is-sticky .site-header {
 	.mobile-navigation{
 		width: 10%;
 		background-color: transparent !important;
-		padding-top: 5%;
+		padding-top: 8%;
 	}
 	  
 }
@@ -3612,7 +3704,7 @@ body.admin-bar .is-sticky .site-header {
 
 
 a.custom-logo-link {
-    width: 20%;
+    width: 28%;
     height: 20%;
     display: flex;
 }
@@ -4369,6 +4461,15 @@ ul.wp-block-social-links,
 	padding: 40px;
 	background-color: rgba(255, 255, 255, .7);
 	max-width: 75rem;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.medium-cta {
+	margin: 40px auto;
+	padding: 40px;
+	background-color: rgba(255, 255, 255, .7);
+	max-width: 100rem;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .form-cta {
@@ -4376,6 +4477,10 @@ ul.wp-block-social-links,
 	padding: 40px;
 	background-color: rgba(255, 255, 255, .7);
 	max-width: 60rem;
+}
+
+.wpcf7-form-control-wrap {
+	padding: 20px 0px;
 }
 
 @media (max-width: 500px) {
