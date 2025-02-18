@@ -23,8 +23,7 @@
 
 <header id="masthead" class="site-header">
 	<div class="top-navigation">
-		<!-- Mobile menu -->
-		<?php get_template_part( 'template-parts/content-menu-drawer' ); ?>
+		
 
 		<div class="container">
 			<div class="site-identity clear">
@@ -46,6 +45,8 @@
 				</div><!-- .top-navigation-right -->
 			</div><!-- .site-identity-->
 		</div><!-- .container -->
+		<!-- Mobile menu -->
+		<?php get_template_part( 'template-parts/content-menu-drawer' ); ?>
 	</div><!-- .top-navigation -->
 
 	<!-- Get the archive page titles -->

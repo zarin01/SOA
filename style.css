@@ -1445,7 +1445,7 @@ Menus
 
 @media (max-width: 600px) {
 	.site-title-wrap .custom-logo-link img {
-		min-width: 175px;
+		min-width: 120px;
 	}
 }
 
@@ -3575,8 +3575,6 @@ body.admin-bar .is-sticky .site-header {
 	  }
 
 	.top-navigation{
-		display: flex;
-		flex-direction: row-reverse;
 		padding-top: 15px;
 	}
 
@@ -3585,7 +3583,7 @@ body.admin-bar .is-sticky .site-header {
 	  }
 
 	.menu-toggle.button-toggle span {
-	display: none;
+	display: none !important;
 	}
 	
 	.menu-toggle.button-toggle::before {
@@ -3608,12 +3606,6 @@ body.admin-bar .is-sticky .site-header {
 	min-width: 240px;
 }
 
-@media (max-width: 1000px) {
-	.site-title-wrap {
-		max-width: 100%;
-		text-align: center;
-	}
-}
 
 @media (min-width: 1000px) {
 	.titles-wrap {
