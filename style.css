@@ -385,6 +385,10 @@ Class Styles
 	padding: 15px;
 }
 
+.padding {
+	padding: 20px !important;
+}
+
 .black-border {
 	border: solid 1px #000;
 }
@@ -694,19 +698,16 @@ input[type="button"],
 input[type="reset"],
 .button,
 .comment-navigation a {
-	display: block;
-  padding: 10px;
-  background-color: #6192A8 !important;
-  border-color: #6192A8;
-  width: 45%;
-  text-align: center;
-  color: #fff;
-  text-decoration: none;
-  margin: 14px auto;
-  font-weight: 600;
-  min-width: 200px;
-  transition: all .5s ease;
-  margin-top: 15px;
+	background: #0072e5;
+	border: none;
+	border-radius: 3px;
+	color: #fff;
+	font-family: "Public Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	font-weight: 600;
+	padding: 14px 20px;
+	-webkit-appearance: none;
+	transition: 0.2s ease-in-out;
 }
 
 
@@ -715,7 +716,6 @@ input[type="submit"] {
   padding: 10px;
   background-color: #6192A8 !important;
   border-color: #6192A8;
-  width: 45%;
   text-align: center;
   color: #fff;
   text-decoration: none;
@@ -892,10 +892,29 @@ form {
 	width: 100%;
 }
 
-.wpcf7 p {
+.wpcf7 p:has(.wpcf7-submit.has-spinner) {
 	display: flex !important;
 	justify-content: center !important;
+	flex-direction: column;
+	font-weight: 600;
+	text-transform: uppercase;
+	font-family: "Inter", sans-serif;
+	font-size: 17px;
+}
 
+.wpcf7 .wpcf7-submit.has-spinner {
+	margin-left: 15%;
+	font-weight: 600;
+	text-transform: uppercase;
+	font-family: "Inter", sans-serif;
+	font-size: 17px;
+	border: none;
+}
+
+.wpcf7-form p {
+	line-height: 1.476;
+	font-family: "Inter",sans-serif;
+	font-size: 21px;
 }
 
 .field-wrap {
@@ -3439,6 +3458,12 @@ body.admin-bar .is-sticky .site-header {
 		align-items: center;
 	}
 
+	a.custom-logo-link {
+		width: 50%;
+		height: 20%;
+		display: flex;
+	  }
+
 	.top-navigation{
 		display: flex;
 		flex-direction: row-reverse;
@@ -4327,6 +4352,13 @@ ul.wp-block-social-links,
 	max-width: 75rem;
 }
 
+.form-cta {
+	margin: 40px auto;
+	padding: 40px;
+	background-color: rgba(255, 255, 255, .7);
+	max-width: 60rem;
+}
+
 @media (max-width: 500px) {
 	.story-cta {
 		margin: 20px 0px;
@@ -4336,7 +4368,7 @@ ul.wp-block-social-links,
 	}
 
 	.story-cta .padding-xy {
-		padding: 0px;
+		padding: 5px;
 	}
 
 	.wp-block-cover, .wp-block-cover-image {
