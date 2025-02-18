@@ -389,6 +389,16 @@ Class Styles
 	padding: 20px !important;
 }
 
+.padding-large {
+	padding: 40px;
+}
+
+@media (max-width: 800px) {
+	.padding-large {
+		padding: 40px;
+	}
+}
+
 .black-border {
 	border: solid 1px #000;
 }
@@ -3337,6 +3347,14 @@ Header
 	text-align: center;
 }
 
+@media (max-width: 400px) {
+	.story-blurb, .pastor-intro-text {
+		min-width: 100%;
+		max-width: 100%;
+	}
+	
+}
+
 .story-blurb h2 {
 	font-size: 7rem;
   margin: 0 auto;
@@ -3759,6 +3777,7 @@ Content
 @media (max-width: 600px) {
 	#page {
 		padding-top: 8%;
+		padding-top: 0px !important;
 	}
 }
 
@@ -4363,7 +4382,7 @@ ul.wp-block-social-links,
 	.story-cta {
 		margin: 20px 0px;
 		background-color: rgba(255, 255, 255, .7);
-		padding: 5px;
+		padding: 10px;
 		max-width: 75rem;
 	}
 
