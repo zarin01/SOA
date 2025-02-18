@@ -31,7 +31,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	outline: 0;
 	padding: 0;
 	vertical-align: baseline;
-	font-weight: 700;
   	letter-spacing: -0.0415625em;
   	line-height: 1.25;
   
@@ -449,6 +448,39 @@ Class Styles
 	border-radius: 10px;
 }
 
+.flex-center {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.css-k008qs {
+	display: flex;
+	justify-content: center;
+}
+
+
+span.soa-we-statements {
+	letter-spacing: 2px;
+	font-size: 1.5em;
+}
+span.soa-we-statements {
+	letter-spacing: 2px;
+	font-size: 1.5em;
+}
+.soa-gold-color {
+	color: #DCAB2B;
+}
+.bebas-neu-font {
+	font-family: "Bebas Neue", serif !important;
+}
+.soa-gold-color {
+	color: #DCAB2B;
+}
+.bebas-neu-font {
+	font-family: "Bebas Neue", serif !important;
+}
+
 @media (min-width: 600px) {
 	.gap-extended {
 		gap: 40px;
@@ -654,24 +686,44 @@ textarea {
 	vertical-align: baseline;
 	-webkit-appearance: none;
 	box-sizing: border-box;
+	box-shadow: none;
 }
 
 button,
 input[type="button"],
 input[type="reset"],
-input[type="submit"],
 .button,
 .comment-navigation a {
-	background: #0072e5;
-	border: none;
-	border-radius: 3px;
-	color: #fff;
-	font-family: "Public Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 18px;
-	font-weight: 600;
-	padding: 14px 20px;
-	-webkit-appearance: none;
-	transition: 0.2s ease-in-out;
+	display: block;
+  padding: 10px;
+  background-color: #6192A8 !important;
+  border-color: #6192A8;
+  width: 45%;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  margin: 14px auto;
+  font-weight: 600;
+  min-width: 200px;
+  transition: all .5s ease;
+  margin-top: 15px;
+}
+
+
+input[type="submit"] {
+	display: block;
+  padding: 10px;
+  background-color: #6192A8 !important;
+  border-color: #6192A8;
+  width: 45%;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  margin: 14px auto;
+  font-weight: 600;
+  min-width: 200px;
+  transition: all .5s ease;
+  margin-top: 15px;
 }
 
 @media (max-width: 600px) {
@@ -694,8 +746,8 @@ input[type="submit"]:hover,
 .comment-navigation a:hover,
 .drawer .tax-widget a:hover,
 a.added_to_cart:hover {
-	box-shadow: inset 0 0 80px rgba(255, 255, 255, 0.25);
-	-webkit-box-shadow: inset 0 0 80px rgba(255, 255, 255, 0.25);
+	box-shadow: none;
+	-webkit-box-shadow: none;
 	color: #fff;
 	cursor: pointer;
 }
@@ -838,6 +890,12 @@ input[type="search"]::-webkit-search-decoration {
 form {
 	display: inline-block;
 	width: 100%;
+}
+
+.wpcf7 p {
+	display: flex !important;
+	justify-content: center !important;
+
 }
 
 .field-wrap {
@@ -1017,7 +1075,31 @@ fieldset legend {
 form label {
 	display: inline-block;
 	width: 100%;
-	font-weight: 600;
+	display: block;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.wp-block-contact-form-7-contact-form-selector form label {
+	text-align: left;
+	font-family: "Inter", sans-serif;
+	font-size: 16px !important;
+	font-weight: 400;
+	letter-spacing: normal;
+	line-height: 23.6167px;
+}
+
+.wpcf7-form-control .wpcf7-submit {
+  display: block !important;
+  padding: 10px !important;
+  background-color: #6192A8 !important;
+  width: 30% !important;
+  text-align: center !important;
+  color: #fff !important;
+  text-decoration: none !important;
+  margin: 14px auto !important;
+  font-weight: 600 !important;
+  min-width: 200px !important;
 }
 
 ::-webkit-input-placeholder {
@@ -1613,7 +1695,7 @@ Menus
 .main-navigation .children {
 	position: absolute;
 	width: 200px;
-	top: 52px;
+	top: 48px;
 	text-align: left;
 	font-weight: 400;
 	font-size: 1.7rem;
@@ -4243,7 +4325,6 @@ ul.wp-block-social-links,
 	padding: 40px;
 	background-color: rgba(255, 255, 255, .7);
 	max-width: 75rem;
-	text-align: center;
 }
 
 @media (max-width: 500px) {
@@ -4252,7 +4333,6 @@ ul.wp-block-social-links,
 		background-color: rgba(255, 255, 255, .7);
 		padding: 5px;
 		max-width: 75rem;
-		text-align: center;
 	}
 
 	.story-cta .padding-xy {
