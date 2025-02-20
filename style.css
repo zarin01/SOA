@@ -3481,8 +3481,13 @@ Header
 
 @media (max-width: 1000px) {
 	.drawer-menu-explore {
-		background: #272c30;
+		background: #fff;
 		padding: 15px 5% 30px 5%;
+		color: #dbaa2a !important;
+	}
+
+	.drawer .drawer-navigation ul li {
+		color: #dbaa2a !important;
 	}
 }
 
