@@ -542,9 +542,6 @@ function soa_slider_shortcode() {
             </div>
         </div>
     </div>
-
-	
-
     <script>
         jQuery(document).ready(function () {
             initSlider();
