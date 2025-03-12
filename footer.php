@@ -6,7 +6,6 @@
  *
  * @package Genesis Block Theme
  */
-
 ?>
 
 	</div><!-- #content -->
@@ -14,13 +13,30 @@
 
 <footer id="colophon" class="site-footer">
 	<div class="container">
-		<?php if ( is_active_sidebar( 'footer-1' ) ) : ?>
+		<?php if ( is_active_sidebar( 'footer-1' ) || is_active_sidebar( 'footer-2' ) || is_active_sidebar( 'footer-3' ) ) : ?>
 			<div class="footer-widgets">
-			<h2 class="screen-reader-text"><?php esc_html_e( 'Footer', 'genesis-block-theme' ); ?></h2>
+				<h2 class="screen-reader-text"><?php esc_html_e( 'Footer', 'genesis-block-theme' ); ?></h2>
+
 				<?php if ( is_active_sidebar( 'footer-1' ) ) { ?>
 					<div class="footer-column">
-						<div class="footer-background" >
+						<div class="footer-background">
 							<?php dynamic_sidebar( 'footer-1' ); ?>
+						</div>
+					</div>
+				<?php } ?>
+
+				<?php if ( is_active_sidebar( 'footer-2' ) ) { ?>
+					<div class="footer-column">
+						<div class="footer-background">
+							<?php dynamic_sidebar( 'footer-2' ); ?>
+						</div>
+					</div>
+				<?php } ?>
+
+				<?php if ( is_active_sidebar( 'footer-3' ) ) { ?>
+					<div class="footer-column">
+						<div class="footer-background">
+							<?php dynamic_sidebar( 'footer-3' ); ?>
 						</div>
 					</div>
 				<?php } ?>
@@ -29,14 +45,14 @@
 		<?php endif; ?>
 
 		<p class="footer-copyright">© 
-		    <?php echo date('Y'); ?> 
-		    <a href="https://storiesofantisemitism.com/">Stories of Antisemitism</a>
+			<?php echo date('Y'); ?> 
+			<a href="https://storiesofantisemitism.com/">Stories of Antisemitism</a>
 		</p>
 		<p class="managed-by-steckinsights">
-            <a href="https://www.steckinsights.com">
-                Managed by <img src="https://www.steckinsights.com/wp-content/themes/steckinsights/images/SteckInsightsLogo.png" alt="Steck Insights WordPress Development" class="steckinsights-logo">
-            </a>
-        </p>
+			<a href="https://www.steckinsights.com">
+				Managed by <img src="https://www.steckinsights.com/wp-content/themes/steckinsights/images/SteckInsightsLogo.png" alt="Steck Insights WordPress Development" class="steckinsights-logo">
+			</a>
+		</p>
 	</div><!-- .container -->
 </footer><!-- #colophon -->
 
