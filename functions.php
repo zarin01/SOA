@@ -551,3 +551,137 @@ function soa_slider_shortcode() {
     return ob_get_clean();
 }
 add_shortcode('soa_slider', 'soa_slider_shortcode');
+
+
+
+
+
+
+function get_slider() {
+    ob_start();
+
+    $args_featured = array(
+        'posts_per_page' => 6,
+        'post_type'      => 'heading-slider', // Updated to match ACF's custom post type
+        'meta_key'       => '_is_featured',
+        'meta_value'     => '1',
+        'orderby'        => 'date',
+        'order'          => 'DESC'
+    );
+
+    $featured_posts = new WP_Query($args_featured);
+    $posts_to_show = array();
+
+    if ($featured_posts->have_posts()) {
+        while ($featured_posts->have_posts()) {
+            $featured_posts->the_post();
+            $posts_to_show[] = get_the_ID();
+        }
+    }
+
+    $remaining_posts_needed = 6 - count($posts_to_show);
+
+    if ($remaining_posts_needed > 0) {
+        $args_latest = array(
+            'posts_per_page' => $remaining_posts_needed + 4,
+            'post_type'      => 'heading-slider',
+            'orderby'        => 'date',
+            'order'          => 'DESC',
+            'post__not_in'   => $posts_to_show,
+            'meta_query'     => array(
+                array(
+                    'key'     => '_is_featured',
+                    'compare' => 'NOT EXISTS'
+                )
+            )
+        );
+
+        $latest_posts = new WP_Query($args_latest);
+        $excluded_count = 0;
+
+        if ($latest_posts->have_posts()) {
+            while ($latest_posts->have_posts() && count($posts_to_show) < 6) {
+                $latest_posts->the_post();
+
+                if ((has_category('culture') || has_category('government-updates')) && $excluded_count < 4) {
+                    $excluded_count++;
+                    continue;
+                }
+
+                $posts_to_show[] = get_the_ID();
+            }
+        }
+    }
+
+    if (!empty($posts_to_show)) {
+        $args_combined = array(
+            'post_type'      => 'heading-slider',
+            'post__in'       => $posts_to_show,
+            'orderby'        => 'post__in',
+            'posts_per_page' => 6
+        );
+
+        $final_posts = new WP_Query($args_combined);
+
+        if ($final_posts->have_posts()) : ?>
+            <div class="home-slider">
+                <div class="slider-wrapper">
+                    <?php while ($final_posts->have_posts()) : $final_posts->the_post(); 
+                        $title = get_field('title'); // ACF Field for Title
+                        $youtube_url = get_field('youtube_url'); // ACF Field for YouTube Video
+                        $youtube_embed = '';
+
+                        // Embed YouTube Video if available
+                        if ($youtube_url) {
+                            preg_match('/[\\?\\&]v=([^\\?\\&]+)/', $youtube_url, $matches);
+                            $video_id = $matches[1] ?? null;
+                            if ($video_id) {
+                                $youtube_embed = '<iframe width="560" height="315" src="https://www.youtube.com/embed/' . esc_attr($video_id) . '" frameborder="0" allowfullscreen></iframe>';
+                            }
+                        }
+                    ?>
+                        <div class="slider-item">
+                            <div class="slider-media">
+                                <?php if ($youtube_embed) : ?>
+                                    <?php echo $youtube_embed; ?>
+                                <?php else : ?>
+                                    <img src="https://via.placeholder.com/560x315?text=No+Video+Available" alt="No video available">
+                                <?php endif; ?>
+                            </div>
+                            <div class="post-details">
+                                <h2 class="slider-post-title">
+                                    <a href="<?php the_permalink(); ?>"><?php echo esc_html($title); ?></a>
+                                </h2>
+                                <p class="slider-post-meta">
+                                    <span class="date"><?php echo get_the_date(); ?></span>
+                                </p>
+                            </div>
+                        </div>
+                    <?php endwhile; ?>
+                </div>
+                <div class="slider-dots">
+                    <?php for ($i = 0; $i < $final_posts->post_count; $i++) : ?>
+                        <span class="dot" data-slide="<?php echo $i; ?>"></span>
+                    <?php endfor; ?>
+                </div>
+                <button class="prev">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="24" height="24">
+                        <path fill="#575757" d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
+                    </svg>
+                </button>
+                <button class="next">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="24" height="24">
+                        <path fill="#575757" d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5 12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/>
+                    </svg>
+                </button>
+            </div>
+        <?php else : ?>
+            <p>No posts available</p>
+        <?php endif;
+
+        wp_reset_postdata();
+    }
+
+    return ob_get_clean();
+}
+add_shortcode('display_slider', 'get_slider');
