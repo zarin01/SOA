@@ -650,7 +650,7 @@ function get_slider() {
                             </div>
                             <div class="post-details">
                                 <h2 class="slider-post-title">
-                                    <a href="<?php the_permalink(); ?>"><?php echo esc_html($title); ?></a>
+                                    <p><?php echo esc_html($title); ?></p>
                                 </h2>
                                 <p class="slider-post-meta">
                                     <span class="date"><?php echo get_the_date(); ?></span>
