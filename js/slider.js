@@ -90,7 +90,9 @@ document.addEventListener('DOMContentLoaded', function () {
         updateSlides();
     }
 
-    
+    function startAutoSlide() {
+        autoSlideInterval = setInterval(nextSlide, 4000);
+    }
 
     function stopAutoSlide() {
         clearInterval(autoSlideInterval);
