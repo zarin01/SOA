@@ -4560,14 +4560,22 @@ Home Slider
 
 .slider-item.left {
     transform: scale(0.8) translateX(-220px) rotateY(15deg);
-    opacity: 0.55;
-    z-index: 1;
+	opacity: 0.55;
+	z-index: 1;
+	background-color: rgb(0, 0, 0);
+  opacity: .4;
 }
 
 .slider-item.right {
     transform: scale(0.8) translateX(220px) rotateY(-15deg);
-    opacity: 0.55;
-    z-index: 1;
+	opacity: 0.55;
+	z-index: 1;
+	background-color: rgb(0, 0, 0);
+	opacity: .4;
+}
+
+.slider-item.right .slider-post-title p, .slider-item.left .slider-post-title p {
+	opacity: .5;
 }
 
 .slider-item.hidden {
@@ -4648,7 +4656,7 @@ Home Slider
 }
 
 .post-details {
-	background: rgba(255, 255, 255, .75) !important;
+	background: rgba(255, 255, 255, .9) !important;
 	padding: 5px 10px;
 	border-radius: 10px;
   }
@@ -4736,4 +4744,12 @@ Home Slider
 .content-center {
 	display: flex !important;
 	justify-content: space-between !important;
+}
+
+.margin-right {
+	margin-right: 25px !important;
+}
+
+.margin-left {
+	margin-left: 25px !important;
 }
