@@ -531,12 +531,12 @@ function soa_slider_shortcode() {
     ?>
     <div class="sub-contain">
 		<h2>Real People, Real Stories</h2>
-        <div class="soa-qoutes-contain">
+        <div class="soa-quotes-contain">
             <div class="soa-slides">
-                <div class="soa-qoutes"><q>“My father is from the east coast. He didn’t suffer much antisemitism, except that he would get called “Christ killer” from time to time.”</q><p class="soa-names"> -Ron</p></div>
-                <div class="soa-qoutes"><q>“Last night my friends and I were playing cards. One guy told my Jewish friend that it made sense that he was winning all of the money because he is Jewish.”</q><p class="soa-names"> -Tim</p></div>
-                <div class="soa-qoutes"><q>“Yeah, I’m Jewish. Jewish enough for the Third Reich.”</q><p class="soa-names"> -Anon</p></div>
-                <div class="soa-qoutes"><q>“When I was in college, people would say that they ‘got Jewed’, meaning that someone ripped them off or negotiated them out of their money. Some of them were Christians, but using that saying made me wonder if they were very good ones.”</q><p class="soa-names"> -Andrew</p></div>
+                <div class="soa-quotes"><q>“My father is from the east coast. He didn’t suffer much antisemitism, except that he would get called “Christ killer” from time to time.”</q><p class="soa-names"> -Ron</p></div>
+                <div class="soa-quotes"><q>“Last night my friends and I were playing cards. One guy told my Jewish friend that it made sense that he was winning all of the money because he is Jewish.”</q><p class="soa-names"> -Tim</p></div>
+                <div class="soa-quotes"><q>“Yeah, I’m Jewish. Jewish enough for the Third Reich.”</q><p class="soa-names"> -Anon</p></div>
+                <div class="soa-quotes"><q>“When I was in college, people would say that they ‘got Jewed’, meaning that someone ripped them off or negotiated them out of their money. Some of them were Christians, but using that saying made me wonder if they were very good ones.”</q><p class="soa-names"> -Andrew</p></div>
                 <a class="prev">❮</a>
                 <a class="next">❯</a>
             </div>
@@ -647,14 +647,6 @@ function get_slider() {
                                 <?php else : ?>
                                     <img src="https://via.placeholder.com/560x315?text=No+Video+Available" alt="No video available">
                                 <?php endif; ?>
-                            </div>
-                            <div class="post-details">
-                                <h2 class="slider-post-title">
-                                    <p><?php echo esc_html($title); ?></p>
-                                </h2>
-                                <p class="slider-post-meta">
-                                    <span class="date"><?php echo get_the_date(); ?></span>
-                                </p>
                             </div>
                         </div>
                     <?php endwhile; ?>

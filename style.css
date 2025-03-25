@@ -590,7 +590,7 @@ span.soa-we-statements {
 Slider
 -------------------------------------------------------------- */
 
-.soa-qoutes {
+.soa-quotes {
 	display: none;
 	padding: 40px 80px 20px;
 	text-align: center;
@@ -608,7 +608,7 @@ Slider
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	max-width: 670px !important;
+	max-width: 725px !important;
 }
 
 .sub-contain h2 {
@@ -631,7 +631,7 @@ Slider
 
 .soa-names {
 	font-size: 2.2rem;
-	color: #fff;
+	color: #000;
 	margin: 20px 0;
 	font-family: "Inter",sans-serif;
 }
@@ -4540,7 +4540,7 @@ Home Slider
     transition: transform 0.5s ease-in-out;
     perspective: 1200px;
 	height: 100%;
-	height: 650px;
+	height: 550px;
 }
 
 .slider-item {
@@ -4752,4 +4752,179 @@ Home Slider
 
 .margin-left {
 	margin-left: 25px !important;
+}
+
+
+
+
+
+.icon-background {
+	background: #fcb900;
+	padding: 5px;
+	border-radius: 10px;
+}
+
+@media (max-width: 1200px) {
+	.share-column .wp-block-cover__inner-container p {
+		font-size: 75px !important;
+	}
+
+	.share-column .wp-block-cover__inner-container {
+		max-height: 200px !important;
+	}
+}
+
+@media (max-width: 980px) {
+	.share-column .wp-block-cover__inner-container p {
+		font-size: 60px !important;
+	}
+
+	.share-column .wp-block-cover__inner-container {
+		max-height: 300px !important;
+	}
+
+	.share-column .kb-svg-icon-wrap svg {
+		width: .7em;
+		height: .7em;
+	}
+
+	.custom-resources-row .kt-inside-inner-col {
+		padding: 0 35px !important;
+	}
+}
+
+@media (max-width: 781px) {
+	.hope-column p {
+		text-align: center !important;
+	}
+
+	.hope-column .wp-block-columns .wp-block-column {
+		display: flex !important;
+		flex-direction: column !important;
+		justify-content: center !important;
+		align-items: center !important;
+	}
+}
+
+@media (max-width: 980px) {
+	.share-column .wp-block-columns .wp-block-column {
+		display: flex !important;
+		flex-direction: column !important;
+		justify-content: center !important;
+		align-items: center !important;
+	}
+
+	.share-column .wp-block-columns .wp-block-column p {
+		margin: 0px !important;
+	}
+
+	
+#show-more-button a {
+	width: 65%;
+}
+
+}
+
+@media (max-width: 500px) {
+	.share-column .kb-svg-icon-wrap svg {
+		width: .5em;
+		height: .5em;
+	}
+
+	.share-column .wp-block-cover__inner-container p {
+		font-size: 50px !important;
+	}
+}
+
+.share-column .wp-block-cover__inner-container {
+	max-height: 170px;
+}
+
+.medium-blank-cta {
+	margin: 40px auto;
+	padding: 40px;
+	max-width: 100rem;
+}
+
+.custom-width {
+	width: auto !important;
+}
+
+.footer-widgets .wp-block-column a {
+	padding-bottom: 10px !important;
+}
+
+.text-black, .text-black a {
+	color: black !important;
+}
+
+.custom-resources-row .kt-inside-inner-col {
+	height: 100% !important;
+	display: flex;
+	justify-content: center;
+	padding: 0 65px;
+}
+
+.advocate-heading {
+	margin: 0 !important;
+}
+
+.custom-resources-row .kt-inside-inner-col .arrow-link {
+	gap: 10px;
+	margin-bottom: 15px;
+	font-family: Inter;
+	font-weight: 600;
+	font-size: 28px;
+	line-height: 189%;
+	letter-spacing: 0%;
+}
+
+.arrow-author {
+	color: black !important;
+	font-size: 24px !important;
+	font-weight: 400 !important;
+	margin-bottom: 20px !important;
+}
+
+.html-arrow {
+	margin-right: 10px;
+	color: black;
+	font-size: 1.8rem;
+}
+
+.show-more {
+	display: none;
+	transition: max-height 0.4s ease-out, opacity 0.4s ease-out;
+}
+
+.hope-land-cta {
+	width: 75%;
+}
+
+.hope-land-cta strong {
+	font-family: "Public Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.hope-column .wp-block-cover__inner-container, 
+.hope-land-cta, 
+.hope-land-cta img {
+	display: flex !important;
+	justify-content: center !important;
+	align-items: center !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.hope-column .wp-block-columns {
+	gap: 20px !important;
+}
+
+#show-more-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#show-more-button a {
+	width: 55%;
 }

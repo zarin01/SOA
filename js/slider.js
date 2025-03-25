@@ -122,3 +122,12 @@ document.addEventListener('DOMContentLoaded', function () {
     updateSlides();
     startAutoSlide();
 });
+
+
+
+document.getElementById("show-more-button").addEventListener("click", function() {
+    const elements = document.querySelectorAll(".show-more");
+    elements.forEach(el => {
+        el.style.display = el.style.display === "none" || el.style.display === "" ? "block" : "none";
+    });
+});
