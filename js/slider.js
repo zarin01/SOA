@@ -124,10 +124,16 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-
 document.getElementById("show-more-button").addEventListener("click", function() {
     const elements = document.querySelectorAll(".show-more");
+
     elements.forEach(el => {
-        el.style.display = el.style.display === "none" || el.style.display === "" ? "block" : "none";
+        if (el.style.maxHeight) {
+            el.style.overflow = "hidden";
+            el.style.maxHeight = null;
+        } else {
+            el.style.overflow = "hidden";
+            el.style.maxHeight = el.scrollHeight + "px";
+        }
     });
 });

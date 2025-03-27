@@ -702,7 +702,7 @@ a {
 a:hover,
 a:focus,
 a:active {
-	color: #dcab2b;
+	color: #dcab2b !important;
 }
 
 /* --------------------------------------------------------------
@@ -4834,6 +4834,11 @@ Home Slider
 	.share-column .wp-block-cover__inner-container p {
 		font-size: 50px !important;
 	}
+
+	.padding-first-row .kt-inside-inner-col {
+		padding: 0 10px 0 25px !important;
+	}
+	
 }
 
 .share-column .wp-block-cover__inner-container {
@@ -4865,6 +4870,13 @@ Home Slider
 	padding: 0 65px;
 }
 
+.padding-first-row .kt-inside-inner-col {
+	padding: 0 10px 0 45px !important;
+	height: 100% !important;
+	display: flex;
+	justify-content: center;
+}
+
 .advocate-heading {
 	margin: 0 !important;
 }
@@ -4894,7 +4906,9 @@ Home Slider
 
 .show-more {
 	display: none;
-	transition: max-height 0.4s ease-out, opacity 0.4s ease-out;
+	transition: 0.8s ease-out, opacity 0.8s ease-out;
+
+    overflow: hidden;
 }
 
 .hope-land-cta {
