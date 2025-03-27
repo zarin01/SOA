@@ -4870,11 +4870,17 @@ Home Slider
 	padding: 0 65px;
 }
 
+
+
 .padding-first-row .kt-inside-inner-col {
 	padding: 0 10px 0 45px !important;
 	height: 100% !important;
 	display: flex;
 	justify-content: center;
+}
+
+.padding-first-row #show-more-button, .padding-first-row .wp-block-buttons {
+	padding: 0 35px 0 0px !important;
 }
 
 .advocate-heading {
@@ -4904,12 +4910,6 @@ Home Slider
 	font-size: 1.8rem;
 }
 
-.show-more {
-	display: none;
-	transition: 0.8s ease-out, opacity 0.8s ease-out;
-
-    overflow: hidden;
-}
 
 .hope-land-cta {
 	width: 75%;
@@ -4941,4 +4941,21 @@ Home Slider
 
 #show-more-button a {
 	width: 55%;
+}
+
+
+
+
+.show-more {
+	display: none;
+	opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease-out, max-height 0.5s ease-out;
+}
+
+.show-more.active {
+	display: block !important;
+	opacity: 1 !important;
+    max-height: 500px !important;
 }

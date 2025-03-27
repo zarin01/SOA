@@ -124,16 +124,16 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+
 document.getElementById("show-more-button").addEventListener("click", function() {
     const elements = document.querySelectorAll(".show-more");
-
     elements.forEach(el => {
-        if (el.style.maxHeight) {
-            el.style.overflow = "hidden";
-            el.style.maxHeight = null;
+        if (el.classList.contains("not-active") || !el.classList.contains("active")) {
+            el.classList.add("active");
+            el.classList.remove("not-active");
         } else {
-            el.style.overflow = "hidden";
-            el.style.maxHeight = el.scrollHeight + "px";
+            el.classList.add("not-active");
+            el.classList.remove("active");
         }
     });
 });
