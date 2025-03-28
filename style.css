@@ -4789,7 +4789,7 @@ Home Slider
 	}
 
 	.custom-resources-row .kt-inside-inner-col {
-		padding: 0 35px !important;
+		padding: 0 30px;
 	}
 }
 
@@ -4825,6 +4825,15 @@ Home Slider
 
 }
 
+@media (max-width: 768px) {
+	.custom-resources-row .kt-inside-inner-col {
+		height: 100% !important;
+		display: flex;
+		justify-content: center;
+		padding: 0 35px;
+	}
+}
+
 @media (max-width: 500px) {
 	.share-column .kb-svg-icon-wrap svg {
 		width: .5em;
@@ -4837,6 +4846,10 @@ Home Slider
 
 	.padding-first-row .kt-inside-inner-col {
 		padding: 0 10px 0 25px !important;
+	}
+
+	.custom-resources-row .kt-inside-inner-col {
+		padding: 0 15px !important;
 	}
 	
 }
@@ -4867,9 +4880,35 @@ Home Slider
 	height: 100% !important;
 	display: flex;
 	justify-content: center;
-	padding: 0 65px;
+	padding: 0 70px;
 }
 
+.column-custom-header {
+
+
+font-family: 'Bebas Neue';
+font-style: normal;
+font-weight: 400;
+font-size: 48px;
+line-height: 58px;
+text-align: center;
+
+color: #000000;
+
+
+align-self: stretch;
+
+
+}
+
+.custom-resources-row p {
+	padding: 0px;
+	margin: 0px !important;
+}
+
+.matching-height {
+	height: 115px;
+}
 
 
 .padding-first-row .kt-inside-inner-col {
@@ -4879,7 +4918,7 @@ Home Slider
 	justify-content: center;
 }
 
-.padding-first-row #show-more-button, .padding-first-row .wp-block-buttons {
+.padding-first-row #show-more-button, .padding-first-row .wp-block-buttons, .educate-header {
 	padding: 0 35px 0 0px !important;
 }
 
@@ -4887,9 +4926,13 @@ Home Slider
 	margin: 0 !important;
 }
 
+.padding-first-row {
+
+}
+
 .custom-resources-row .kt-inside-inner-col .arrow-link {
 	gap: 10px;
-	margin-bottom: 15px;
+	margin-bottom: 10px;
 	font-family: Inter;
 	font-weight: 600;
 	font-size: 28px;
@@ -4902,12 +4945,14 @@ Home Slider
 	font-size: 24px !important;
 	font-weight: 400 !important;
 	margin-bottom: 20px !important;
+	padding-left: 25px !important;
 }
 
 .html-arrow {
 	margin-right: 10px;
 	color: black;
 	font-size: 1.8rem;
+	padding-bottom: 10px;
 }
 
 
@@ -4938,20 +4983,11 @@ Home Slider
 	justify-content: center;
 	align-items: center;
 }
-@media (min-width: 861px){
-	#show-more-button a {
-	width: 65% !important;
-}
-}
 
-@media (min-width: 768px){
-	#show-more-button a {
-	width: 75% !important;
-}
-}
 
 #show-more-button a {
-	width: 55%;
+	max-width: 200px;
+	width: 100%;
 }
 
 
