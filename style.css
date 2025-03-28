@@ -4938,12 +4938,21 @@ Home Slider
 	justify-content: center;
 	align-items: center;
 }
+@media (min-width: 861px){
+	#show-more-button a {
+	width: 65% !important;
+}
+}
+
+@media (min-width: 768px){
+	#show-more-button a {
+	width: 75% !important;
+}
+}
 
 #show-more-button a {
 	width: 55%;
 }
-
-
 
 
 .show-more {
