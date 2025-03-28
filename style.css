@@ -4772,6 +4772,11 @@ Home Slider
 	.share-column .wp-block-cover__inner-container {
 		max-height: 200px !important;
 	}
+
+	.padding-first-row .kt-inside-inner-col {
+		padding: 0 10px 0 25px !important;
+	}
+
 }
 
 @media (max-width: 980px) {
@@ -4816,6 +4821,10 @@ Home Slider
 
 	.share-column .wp-block-columns .wp-block-column p {
 		margin: 0px !important;
+	}
+
+	.matching-height {
+		height: 150px !important;
 	}
 
 	
@@ -4912,7 +4921,7 @@ align-self: stretch;
 
 
 .padding-first-row .kt-inside-inner-col {
-	padding: 0 10px 0 45px !important;
+	padding: 0 10px 0 45px;
 	height: 100% !important;
 	display: flex;
 	justify-content: center;
@@ -4924,10 +4933,6 @@ align-self: stretch;
 
 .advocate-heading {
 	margin: 0 !important;
-}
-
-.padding-first-row {
-
 }
 
 .custom-resources-row .kt-inside-inner-col .arrow-link {
