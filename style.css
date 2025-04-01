@@ -4935,10 +4935,6 @@ align-self: stretch;
 	justify-content: space-between;
 }
 
-.padding-first-row #show-more-button, .padding-first-row .wp-block-buttons, .educate-header {
-	padding: 0 35px 0 0px !important;
-}
-
 .advocate-heading {
 	margin: 0 !important;
 }
@@ -4991,11 +4987,6 @@ align-self: stretch;
 	gap: 20px !important;
 }
 
-#show-more-button {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
 
 
 #show-more-button a {
@@ -5017,4 +5008,355 @@ align-self: stretch;
 	display: block !important;
 	opacity: 1 !important;
     max-height: 500px !important;
+}
+
+
+
+
+
+
+
+.advocate-container h2 {
+	font-weight: 700;
+    line-height: 1.25;
+    font-family: "Bebas Neue", Helvetica, sans-serif;
+    letter-spacing: normal;
+	font-size: 48px;
+}
+
+
+.advocate-container .arrow-link {
+	gap: 10px;
+	font-family: Inter;
+	font-weight: 600;
+	font-size: 28px;
+	line-height: 189%;
+	letter-spacing: 0%;
+}
+
+
+.advocate-container p {
+	font-size: 24px;
+	font-family: "Public Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-align: center;
+}
+
+.advocate-container {
+	background-image: url('https://stg-storiesofantisemetism-soastaging.kinsta.cloud/wp-content/uploads/2023/03/jordan-encarnacao-c0rplvWqyZk-unsplash.jpg');
+	background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+	text-align: center;
+	padding: 60px 20px 125px 20px;
+	width: 100vw;
+    margin-left: calc(50% - 50vw);
+	max-width: none;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.advocate-sub-header {
+	color: rgb(255, 255, 255);
+	display: block;
+	font-family:"Public Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 24px;
+	font-style: 1.5px;
+	font-weight: 300;
+	margin-bottom: 35px;
+	width: 40%;
+}
+
+.advocate-header {
+	color: rgb(255, 255, 255);
+    display: inline;
+    font-family: "Bebas Neue", Helvetica, sans-serif;
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 700;
+    height: auto;
+    letter-spacing: 1.5px;
+    line-height: 90px;
+	margin-top: 15px;
+	margin-bottom: 25px;
+}
+
+.advocate-sub-image {
+	width: 50%;
+	max-width: 400px;
+	display: block;
+	margin: 0 auto 20px;
+}
+.advocate-columns {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	max-width: 100%;
+	margin: auto;
+	max-width: 1200px;
+}
+.advocate-column {
+	flex: 1;
+	background: rgba(255, 255, 255, 0.9);
+	padding: 40px 20px;
+}
+
+.advocate-button-left {
+	color: #fff;
+    background-color: black;
+    border-radius: 0px;
+    box-shadow: none;
+    text-decoration: none;
+	padding: calc(.667em + 2px) calc(1.333em + 2px);
+	font-weight: 600;
+	font-size: 1.125em;
+	cursor: pointer;
+}
+
+.advocate-button-right {
+    color: #fff;
+	border-radius: 0px;
+    background-color: #6192a8;
+    box-shadow: none;
+    text-decoration: none;
+	padding: calc(.667em + 2px) calc(1.333em + 2px);
+	font-weight: 600;
+	font-size: 1.125em;
+	cursor: pointer;
+}
+
+
+.advocate-links {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+	min-height: 320px;
+	text-align: center;
+	padding: 0 70px;
+	font-size: 1.125em;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+
+@media (max-width: 1040px) {
+	.advocate-links {
+		padding: 0px 45px;
+	}
+}
+
+@media (max-width: 940px) {
+	.advocate-links {
+		padding: 0px 15px;
+	}
+}
+
+@media (max-width: 800px) {
+	.advocate-columns {
+		flex-direction: column;
+	  }
+
+	.advocate-links {
+		padding: 0px 80px;
+	}
+
+	.advocate-container {
+		padding: 60px 50px 125px 50px;
+	}
+}
+
+@media (max-width: 620px) {
+	.advocate-sub-header {
+		width: 100%;
+	}
+	.advocate-links {
+		padding: 0px 10px;
+	}
+
+	.advocate-container .arrow-link {
+		font-size: 24px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.educate-container h2 {
+	font-weight: 700;
+    line-height: 1.25;
+    font-family: "Bebas Neue", Helvetica, sans-serif;
+    letter-spacing: normal;
+	font-size: 48px;
+}
+
+.educate-container .arrow-link {
+	gap: 10px;
+	font-family: Inter;
+	font-weight: 600;
+	font-size: 26px;
+	line-height: 189%;
+	letter-spacing: 0%;
+	text-align: left;
+}
+
+.educate-container p {
+	font-size: 24px;
+	font-family: "Public Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-align: center;
+}
+
+.educate-container {
+	background-image: url('https://stg-storiesofantisemetism-soastaging.kinsta.cloud/wp-content/uploads/2023/03/educate.jpg');
+	background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+	text-align: center;
+	padding: 60px 20px 125px 20px;
+	width: 100vw;
+    margin-left: calc(50% - 50vw);
+	max-width: none;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.educate-sub-header {
+	color: rgb(255, 255, 255);
+	display: block;
+	font-family:"Public Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 24px;
+	font-style: 1.5px;
+	font-weight: 300;
+	margin-bottom: 35px;
+	width: 40%;
+}
+
+.educate-header {
+	color: rgb(255, 255, 255);
+	text-align: center;
+    display: inline;
+    font-family: "Bebas Neue", Helvetica, sans-serif;
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 700;
+    height: auto;
+    letter-spacing: 1.5px;
+    line-height: 90px;
+	margin-top: 15px;
+	margin-bottom: 25px;
+}
+
+.educate-sub-image {
+	width: 50%;
+	max-width: 400px;
+	display: block;
+	margin: 0 auto 20px;
+}
+
+.educate-columns {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	width: 100%;
+	margin: auto;
+	max-width: 1200px;
+}
+
+.educate-column {
+	flex: 1;
+	background: rgba(255, 255, 255, 0.9);
+	padding: 40px 20px;
+}
+
+.educate-button-left {
+	color: #fff;
+    background-color: black;
+    border-radius: 0px;
+    box-shadow: none;
+    text-decoration: none;
+	padding: calc(.667em + 2px) calc(1.333em + 2px);
+	font-weight: 600;
+	font-size: 1.125em;
+	cursor: pointer;
+}
+
+.educate-button-right {
+    color: #fff;
+	border-radius: 0px;
+    background-color: #6192a8;
+    box-shadow: none;
+    text-decoration: none;
+	padding: calc(.667em + 2px) calc(1.333em + 2px);
+	font-weight: 600;
+	font-size: 1.125em;
+	cursor: pointer;
+}
+
+.lower-show-more {
+	justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+	text-align: center;
+	padding: 0 5px 0 30px;
+	font-size: 1.125em;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.educate-links {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+	min-height: 315px;
+	text-align: center;
+	padding: 0 5px 0 30px;
+	font-size: 1.125em;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+@media (max-width: 1040px) {
+	.educate-links {
+		padding: 0 5px 0px 15px;
+	}
+}
+
+
+@media (max-width: 800px) {
+	.educate-columns {
+		flex-direction: column;
+	}
+
+	.educate-links {
+		padding: 0px 80px;
+	}
+
+	.educate-container {
+		padding: 60px 50px 125px 50px;
+	}
+}
+
+@media (max-width: 620px) {
+	.educate-sub-header {
+		width: 100%;
+	}
+	.educate-links {
+		padding: 0px 10px;
+	}
+
+	.educate-container .arrow-link {
+		font-size: 24px;
+	}
 }
