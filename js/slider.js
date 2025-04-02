@@ -126,17 +126,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 document.getElementById("show-more-button").addEventListener("click", function() {
-    const elements = document.querySelectorAll(".show-more");
+    const elements = document.querySelectorAll(".show-more, .lower-show-more");
+    const educateSlide = document.querySelector(".educate-links");
+
     elements.forEach(el => {
-        if (el.classList.contains("not-active") || !el.classList.contains("active")) {
-            el.classList.add("active");
-            el.classList.remove("not-active");
-        } else {
-            el.classList.add("not-active");
-            el.classList.remove("active");
-        }
+        const isActive = el.classList.contains("active");
+
+        el.classList.toggle("active", !isActive);
+        el.classList.toggle("not-active", isActive);
+
+        el.style.display = isActive ? "none" : "block";
     });
+
+    if (document.querySelector(".show-more.active, .lower-show-more.active")) {
+        educateSlide.style.minHeight = "275px";
+    } else {
+        educateSlide.style.minHeight = "";
+    }
 });
+
+
 
 document.getElementById("show-more-button").addEventListener("click", function() {
     const elements = document.querySelectorAll(".show-more");
