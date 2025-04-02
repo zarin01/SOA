@@ -554,9 +554,6 @@ add_shortcode('soa_slider', 'soa_slider_shortcode');
 
 
 
-
-
-
 function get_slider() {
     ob_start();
 

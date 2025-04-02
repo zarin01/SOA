@@ -162,6 +162,7 @@ button {
 	button {
 		font-size: 16px;
 	}
+	
 }
 
 h1,
@@ -187,7 +188,7 @@ h2 {
 }
 
 h3 {
-	font-size: 1.4em;
+	font-size: 1.3em;
 }
 
 h4 {
@@ -2492,6 +2493,23 @@ Alignments
 	clear: both;
 }
 
+.link-parent .html-arrow {
+	margin-top: 15px !important;
+	padding-bottom: 0px !important;
+}
+
+.event-column {
+	height: 100% !important;
+}
+
+.educate-links .link-parent {
+	text-align: left;
+	display: flex !important;
+    opacity: 1 !important;
+    max-height: 500px !important;
+    text-align: left;
+}
+
 .wp-caption {
 	margin: 0.5em 0 1.5em 0;
 	max-width: 100%;
@@ -4456,6 +4474,10 @@ Block Alignments
 	margin-top: 1em;
 }
 
+.wp-block-image {
+	margin: 0px !important;
+}
+
 ul.blocks-gallery-grid,
 ul.wp-block-social-links,
 .entry-content .wp-block-gallery {
@@ -5054,7 +5076,7 @@ align-self: stretch;
 }
 
 .show-more.active {
-	display: block !important;
+	display: flex !important;
 	opacity: 1 !important;
     max-height: 500px !important;
 	text-align: left;
@@ -5202,7 +5224,7 @@ align-self: stretch;
 	}
 }
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
 	.advocate-columns {
 		flex-direction: column;
 	  }
@@ -5389,7 +5411,7 @@ align-self: stretch;
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
 	.educate-columns {
 		flex-direction: column;
 	}
