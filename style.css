@@ -3508,10 +3508,27 @@ Header
 	.story-blurb, .pastor-intro-text {
 		min-width: 100%;
 		max-width: 100%;
+		padding: 30px 20px;
+	}
+	.story-blurb h2 {
+		font-size: 6rem !important;
+		white-space: nowrap;
 	}
 	
 }
 
+@media (max-width: 300px) {
+	.story-blurb, .pastor-intro-text {
+		min-width: 100%;
+		max-width: 100%;
+		padding: 30px 10px;
+	}
+	.story-blurb h2 {
+		font-size: 5rem !important;
+		white-space: nowrap;
+	}
+	
+}
 .story-blurb h2 {
 	font-size: 7rem;
   margin: 0 auto;
