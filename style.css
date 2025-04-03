@@ -5486,8 +5486,15 @@ width: 100% !important;
 
 }
 .show-more-btn::after {
-  content: " ∨";
-    color: white;
-    font-size: 22px;
-    margin-left: 8px;
-}
+	content: " ∨";
+	color: white;
+	font-size: 22px;
+	margin-left: 8px;
+	display: inline-block;
+	transition: transform 0.3s ease;
+  }
+  
+  .show-more-btn.flipped::after {
+	transform: rotate(180deg);
+  }
+  

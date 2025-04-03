@@ -126,6 +126,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 document.getElementById("show-more-button").addEventListener("click", function() {
+    this.classList.toggle("flipped"); 
+
     const elements = document.querySelectorAll(".show-more, .lower-show-more");
     const educateSlide = document.querySelector(".educate-links");
 
