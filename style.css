@@ -181,14 +181,17 @@ h6 {
 /* Fallback title styles */
 h1 {
 	font-size: 2em;
+	letter-spacing: 1px;
 }
 
 h2 {
 	font-size: 1.6em;
+	letter-spacing: 1px;
 }
 
 h3 {
 	font-size: 1.3em;
+	    letter-spacing: 1px;
 }
 
 h4 {
@@ -623,6 +626,8 @@ Slider
 	margin-top: 35px;
 }
 
+
+
 .mobile-btns .wp-block-buttons>.wp-block-button.wp-block-button__width-25, .mobile-btns .wp-block-buttons>.wp-block-button.has-custom-width, .mobile-btns .wp-block-buttons {
     width: 100% !important;
 	margin: 0px !important;
@@ -636,9 +641,7 @@ Slider
 }
 }
 
-@media (max-width: 520px) {
-
-	
+@media (max-width: 520px) {	
 	.mobile-btns .wp-block-button {
 		width: 100% !important;
 		max-width: 300px !important;
@@ -646,6 +649,14 @@ Slider
 		margin-left: 10px;
 	}
 }
+
+@media (max-width: 350px) {
+	
+	.mobile-btns .wp-block-button {
+		max-width: 200px !important;
+	}
+}
+
 
 .slider-container .wp-block-cover__inner-container {
 	display: flex;
@@ -3511,20 +3522,22 @@ Header
 		padding: 30px 20px;
 	}
 	.story-blurb h2 {
-		font-size: 6rem !important;
+		font-size: 4rem !important;
 		white-space: nowrap;
 	}
 	
 }
 
-@media (max-width: 300px) {
+@media (max-width: 315px) {
 	.story-blurb, .pastor-intro-text {
 		min-width: 100%;
 		max-width: 100%;
 		padding: 30px 10px;
+		font-size: 3.8rem !important;
+		white-space: nowrap;
 	}
 	.story-blurb h2 {
-		font-size: 5rem !important;
+		font-size: 3.8rem !important;
 		white-space: nowrap;
 	}
 	
@@ -4592,6 +4605,12 @@ ul.wp-block-social-links,
 	.wp-block-cover, .wp-block-cover-image {
 		padding: .5em;
 	}
+	.form-cta {
+		margin: 40px auto;
+		padding: 5px;
+		background-color: rgba(255, 255, 255, .7);
+		max-width: 60rem;
+	}
 }
 
 
@@ -5487,8 +5506,8 @@ align-self: stretch;
 	.footer-background {
 		width: 100%;
 		display: flex !important;
-    justify-content: center !important;
-    flex-direction: row !important;
+    	justify-content: center !important;
+    	flex-direction: row;
 		align-items: center !important;
 		gap: 10px;
 	}
@@ -5500,6 +5519,28 @@ align-self: stretch;
 	.footer-widgets .fb_iframe_widget,  .footer-widgets .footer-column {
 width: 100% !important;
 }
+}
+@media (max-width: 375px) {
+
+	
+	.footer-background:last-child {
+    	flex-direction: column;
+	}
+
+	.wp-embed-responsive .wp-has-aspect-ratio iframe {
+		width: 96%;
+	  }
+
+}
+
+
+@media (max-width: 330px) {
+
+	
+
+	.wp-embed-responsive .wp-has-aspect-ratio iframe {
+		width: 95%;
+	  }
 
 }
 .show-more-btn::after {
