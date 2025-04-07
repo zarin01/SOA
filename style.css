@@ -191,7 +191,7 @@ h2 {
 
 h3 {
 	font-size: 1.3em;
-	    letter-spacing: 1px;
+	letter-spacing: 1px;
 }
 
 h4 {
@@ -5534,12 +5534,17 @@ width: 100% !important;
 }
 
 
-@media (max-width: 330px) {
-
-	
+@media (max-width: 350px) {
 
 	.wp-embed-responsive .wp-has-aspect-ratio iframe {
-		width: 95%;
+		width: 90%;
+	  }
+
+}
+@media (max-width: 315px) {
+
+	.wp-embed-responsive .wp-has-aspect-ratio iframe {
+		width: 80%;
 	  }
 
 }
