@@ -5285,6 +5285,12 @@ align-self: stretch;
 	.advocate-container .arrow-link {
 		font-size: 24px;
 	}
+	.educate-container .arrow-link {
+		line-height: 1.3em;
+	}
+	.hide-on-mobile {
+		display: none; 
+	}
 }
 
 
@@ -5424,11 +5430,11 @@ align-self: stretch;
 }
 
 .educate-links {
-    justify-content: center;
+    justify-content: flex-start;
     display: flex;
     flex-direction: column;
     align-items: baseline;
-	min-height: 375px;
+	min-height: 300px;
 	text-align: center;
 	padding: 0 5px 0 30px;
 	font-size: 1.125em;
